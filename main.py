@@ -1,11 +1,14 @@
-import math
+def check_pythagorean(a, b, c):
+    #Проверяет, выполняется ли теорема Пифагора для трёх чисел
+    return a**2 + b**2 == c**2
 
-def pythagorean_theorem(a, b):
-    c = math.sqrt(a**2 + b**2)
-    return c
+if __name__ == "__main__":
+    print("Введите три числа:")
+    a = int(input("a: "))
+    b = int(input("b: "))
+    c = int(input("c: "))
 
-# Пример использования
-a = 3
-b = 4
-c = pythagorean_theorem(a, b)
-print(f"Для a = {a} и b = {b}, гипотенуза c = {c}")
+    if check_pythagorean(a, b, c):
+        print("Числа удовлетворяют теореме Пифагора!")
+    else:
+        print("Числа НЕ удовлетворяют теореме Пифагора.")
